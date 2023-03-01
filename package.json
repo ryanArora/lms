@@ -1,0 +1,35 @@
+{
+  "name": "@ryanarora/lms",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanArora/lms.git"
+  },
+  "license": "GPL-3.0",
+  "author": "Ryan Arora <arora.ryan@gmail.com>",
+  "scripts": {
+    "build": "tsup-node src/index.ts",
+    "dev": "tsx src/index.ts",
+    "format-check": "prettier --check .",
+    "format-write": "prettier --write .",
+    "typecheck": "tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^18.14.2",
+    "@types/prettier": "^2.7.2",
+    "prettier": "^2.8.4",
+    "prettier-plugin-organize-imports": "^3.2.2",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "tsup": "^6.6.3",
+    "tsx": "^3.12.3",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "linux"
+  ]
+}
