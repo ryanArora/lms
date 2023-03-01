@@ -6,10 +6,12 @@ import App from "./client/App";
 const server = express();
 
 server.get("*", (req, res) => {
-  const html = renderToString(<App />);
-  console.log(html);
+  const head = "<title>Hello React!</title>"; // TODO: Implement head.
+  const body = renderToString(<App />);
+  const html = `<!DOCTYPE html><html><head>${head}</head><body>${body}</body></html>`;
 
-  res.send(html);
+  console.log(`URL ${req.url}: Sent html ${html}`);
+  res.set("Content-Type", "text/html").status(200).send(html);
 });
 
 server.listen(3000, () => {
